@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HUHS AI MBTI TEST</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- 시작 화면 -->
+  <div id="start">
+    <div class="logo">
+      HANYANG UNIVERSITY HARDWARE & SOFTWARE · HUHS
+    </div>
+
+    <h1>🤖 AI MBTI TEST</h1>
+
+    <p class="sub">
+      당신의 응답 패턴을 분석해<br>
+      AI가 MBTI를 예측합니다.
+    </p>
+
+    <p class="sub">
+      총 20문항 · 약 2분 소요
+    </p>
+
+    <button class="main-btn" onclick="startTest()">
+      AI에게 분석당하기 →
+    </button>
+  </div>
+
+
+  <!-- 질문 화면 -->
+  <div id="quiz" class="hidden">
+
+    <div class="progress">
+      <div id="progress" class="progress-inner"></div>
+    </div>
+
+    <div id="questionNumber" class="question-number"></div>
+
+    <h2 id="question"></h2>
+
+    <div class="answers">
+      <button class="answer-btn" onclick="answer(2)">
+        매우 그렇다
+      </button>
+
+      <button class="answer-btn" onclick="answer(1)">
+        그렇다
+      </button>
+
+      <button class="answer-btn" onclick="answer(0)">
+        보통이다
+      </button>
+
+      <button class="answer-btn" onclick="answer(-1)">
+        그렇지 않다
+      </button>
+
+      <button class="answer-btn" onclick="answer(-2)">
+        전혀 그렇지 않다
+      </button>
+    </div>
+
+  </div>
+
+
+  <!-- 분석 화면 -->
+  <div id="loading" class="hidden">
+    <div class="loading">
+      <div class="loading-icon">🤖</div>
+
+      <div id="loadingMessage">
+        응답 패턴을 분석하고 있습니다...
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 결과 화면 -->
+  <div id="result" class="hidden">
+
+    <div class="result-title">
+      AI가 예측한 당신의 MBTI
+    </div>
+
+    <div id="mbtiResult" class="mbti"></div>
+
+    <div id="description" class="description"></div>
+
+    <div id="dimensions"></div>
+
+    <button class="main-btn" onclick="restart()">
+      🔄 다시 검사하기
+    </button>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
