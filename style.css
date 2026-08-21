@@ -409,3 +409,14 @@ h2 {
 
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.28);
 }
+
+.club-logo {
+  width: 150px;
+  max-width: 45%;
+  height: auto;
+
+  display: block;
+  margin: 0 auto 18px;
+
+  object-fit: contain;
+}
