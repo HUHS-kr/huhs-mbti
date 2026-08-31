@@ -501,7 +501,7 @@ function showPromotion() {
   document.getElementById("loading").classList.add("hidden");
   document.getElementById("result").classList.add("hidden");
   document.getElementById("promotion").classList.remove("hidden");
-  document.getElementById("club-promo-title").focus({ preventScroll: true });
+  document.getElementById("result-view-button").focus({ preventScroll: true });
   window.scrollTo({ top: 0, behavior: "instant" });
 }
 

@@ -448,3 +448,53 @@ h2 {
 
   object-fit: contain;
 }
+
+/* Keep the promotion and its action inside the available screen height. */
+body:has(#promotion:not(.hidden)) {
+  padding:12px;
+}
+body:has(#promotion:not(.hidden)) .container {
+  width:min(100%,650px);
+  height:calc(100dvh - 24px);
+  padding:16px;
+}
+#promotion:not(.hidden) {
+  height:100%;
+  display:grid;
+  grid-template-rows:minmax(0,1fr) auto;
+  gap:12px;
+}
+#promotion .club-promo {
+  min-height:0;
+  overflow:auto;
+  margin:0;
+  padding:14px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:8px;
+}
+#promotion .club-promo-brand { gap:8px; font-size:13px; }
+#promotion .club-promo-brand img { width:34px; height:34px; }
+#promotion .club-promo h2 { margin:4px 0; font-size:clamp(20px,3.8vw,26px); line-height:1.25; }
+#promotion .club-promo p { margin:0; font-size:14px; line-height:1.5; }
+#promotion .club-map { margin:4px 0; }
+#promotion .club-map-link {
+  width:min(100%,calc(26dvh * 880 / 542),358px);
+  margin:0 auto;
+}
+#promotion .club-map figcaption { margin-top:6px; font-size:20px; }
+#promotion .club-welcome { font-size:12px; }
+#promotion .result-view-btn { margin:0; padding:16px; min-height:54px; }
+@media(max-height:560px) and (min-width:600px) {
+  #promotion .club-promo {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-content:center;
+  }
+  #promotion .club-map { grid-column:2; grid-row:1 / span 4; }
+  #promotion .club-map-link { width:min(100%,calc(44dvh * 880 / 542)); }
+}
+@media(max-height:480px) and (max-width:599px) {
+  #promotion .club-promo { justify-content:flex-start; }
+}
