@@ -90,10 +90,34 @@
   </div>
 
 
-  <!-- 결과 화면 -->
-  <div id="result" class="hidden">
+  <!-- 검사 완료 후 홍보 화면 -->
+  <div id="promotion" class="hidden">
 
-    <div class="result-title">
+    <aside class="club-promo" aria-labelledby="club-promo-title">
+      <div class="club-promo-brand">
+        <img src="images/huhs_logo.png" alt="HUHS 로고" width="48" height="48">
+        <span>한양대학교 중앙 컴퓨터 동아리</span>
+      </div>
+      <h2 id="club-promo-title" tabindex="-1">이런 웹사이트,<br>나도 쉽게 만들어보고 싶다면?</h2>
+      <p>어떻게 만드는지 궁금하다면<br><strong>HUHS 부스로 구경 오세요!</strong></p>
+      <figure class="club-map">
+        <a class="club-map-link" href="images/huhs-booth-map.jpg" target="_blank" rel="noopener noreferrer" aria-label="43번 부스 배치도 원본 크게 보기 (새 탭)">
+          <img src="images/huhs-booth-map.jpg" width="880" height="542" alt="학생회관 아래 중앙 대각선 줄, 42번과 44번 사이가 HUHS 43번 부스입니다.">
+          <span class="club-map-marker" aria-hidden="true"></span>
+        </a>
+        <figcaption>한마당 43번 부스</figcaption>
+      </figure>
+      <p class="club-welcome">테스트만 하고 도망가면 섭섭함<br>부스 오면 간식도 드려요 !!</p>
+    </aside>
+    <p class="result-ready">분석이 완료됐어요. 나의 개발자 유형을 확인해보세요!</p>
+    <button type="button" class="main-btn result-view-btn" onclick="showResult()">
+      내 MBTI 결과 보기 →
+    </button>
+  </div>
+
+  <!-- 버튼을 누른 뒤 표시하는 결과 화면 -->
+  <div id="result" class="hidden">
+    <div class="result-title" id="result-heading" tabindex="-1">
       당신의 MBTI는
     </div>
 

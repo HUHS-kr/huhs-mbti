@@ -410,6 +410,34 @@ h2 {
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.28);
 }
 
+.club-promo {
+  margin-bottom: 24px;
+  padding: 28px 22px;
+  background: linear-gradient(145deg, rgba(34,211,238,.14), rgba(129,140,248,.15));
+  border: 1px solid rgba(103,232,249,.4);
+  border-radius: 22px;
+}
+.club-promo-brand { display:flex; align-items:center; justify-content:center; gap:12px; color:#cffafe; font-size:14px; }
+.club-promo-brand img { object-fit:contain; }
+.club-promo-brand span { font-weight:700; line-height:1.5; text-align:left; }
+.club-promo-brand img { flex-shrink:0; }
+.club-promo h2 { font-size:clamp(23px,4.5vw,30px); line-height:1.4; letter-spacing:-.04em; margin:22px 0 16px; text-wrap:balance; }
+.club-promo p { font-size:15px; line-height:1.8; color:#dbeafe; margin:12px 0; }
+.club-promo p strong { color:#fff; }
+.club-promo .club-welcome { font-size:13px; color:#a5f3fc; }
+.club-map { margin:24px 0 18px; }
+.club-map figcaption { font-size:24px; font-weight:800; color:#cffafe; margin-top:14px; }
+.result-view-btn:focus-visible,.club-map-link:focus-visible { outline:3px solid #67e8f9; outline-offset:4px; border-radius:8px; }
+.club-map-link { display:block; position:relative; margin:16px 0 10px; }
+.club-map-link img { display:block; width:100%; height:auto; border-radius:10px; }
+.club-map-marker { position:absolute; left:52.25%; top:37.8%; width:5%; aspect-ratio:1; border:2px solid #fbff35; border-radius:50%; transform:translate(-50%,-50%); box-shadow:0 0 0 2px #0f172a; pointer-events:none; }
+.result-ready { font-size:14px; line-height:1.7; color:#cffafe; margin:0; }
+.result-view-btn { margin-top:14px; }
+@media(max-width:480px) {
+  .container { width:100%; padding:24px 16px; }
+  .club-promo { padding:22px 14px; }
+}
+
 .club-logo {
   width: 150px;
   max-width: 45%;

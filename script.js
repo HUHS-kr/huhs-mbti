@@ -491,15 +491,23 @@ function analyze() {
       "✅ 분석 완료! 당신의 개발자 유형은...";
   }, 2700);
 
-  // 완료 문구를 잠깐 보여준 뒤 결과 화면
+  // 분석 완료 후 홍보 화면. 결과는 버튼을 눌렀을 때만 표시한다.
   setTimeout(() => {
-    showResult();
+    showPromotion();
   }, 3700);
 }
 
+function showPromotion() {
+  document.getElementById("loading").classList.add("hidden");
+  document.getElementById("result").classList.add("hidden");
+  document.getElementById("promotion").classList.remove("hidden");
+  document.getElementById("club-promo-title").focus({ preventScroll: true });
+  window.scrollTo({ top: 0, behavior: "instant" });
+}
 
 function showResult() {
   document.getElementById("loading").classList.add("hidden");
+  document.getElementById("promotion").classList.add("hidden");
   document.getElementById("result").classList.remove("hidden");
 
   const EorI = scores.EI >= 0 ? "E" : "I";
@@ -568,6 +576,8 @@ function showResult() {
   `;
 
   showPercentages();
+  document.getElementById("result-heading").focus({ preventScroll: true });
+  window.scrollTo({ top: 0, behavior: "instant" });
 }
 
 
@@ -644,6 +654,8 @@ function showPercentages() {
 
 
 function restart() {
+  document.getElementById("promotion").classList.add("hidden");
+  window.scrollTo({ top: 0, behavior: "instant" });
   current = 0;
 
   scores = {
